@@ -1,0 +1,197 @@
+/* Source: Figma "Demo Training - UI System", file whJejnFfwT8EFTWjuoId7X. Light theme only.
+   Name rule: Figma `bg/canvas` -> CSS `--bg-canvas`. */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Primitives: do not use directly in UI, use semantic tokens */
+  --neutral-0: #ffffff;
+  --neutral-50: #f7f8fa;
+  --neutral-100: #eef0f3;
+  --neutral-200: #dde1e7;
+  --neutral-300: #c3c9d2;
+  --neutral-400: #9aa3b0;
+  --neutral-500: #6e7887;
+  --neutral-600: #525c6a;
+  --neutral-700: #3c4450;
+  --neutral-800: #262c35;
+  --neutral-900: #171b21;
+  --royal-50: #eef3ff;
+  --royal-100: #d9e4ff;
+  --royal-200: #b6caff;
+  --royal-300: #87a7ff;
+  --royal-400: #5b83fa;
+  --royal-500: #2563eb;
+  --royal-600: #2450d0;
+  --royal-700: #1e40a8;
+  --royal-800: #1d3787;
+  --royal-900: #1b2f6b;
+  --green-50: #ecfdf3;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --amber-50: #fff8e6;
+  --amber-500: #f59e0b;
+  --amber-700: #b45309;
+  --red-50: #fef1f1;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --blue-50: #eff8ff;
+  --blue-600: #0284c7;
+  --blue-700: #0369a1;
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
+  --purple-50: #f5f3ff;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --teal-600: #0d9488;
+  --pink-600: #db2777;
+  --lime-600: #65a30d;
+  --slate-600: #475569;
+  --black-scrim: #0b0f14;
+
+  /* bg */
+  --bg-canvas: var(--neutral-50);
+  --bg-surface: var(--neutral-0);
+  --bg-surface-subtle: var(--neutral-100);
+  --bg-inverse: var(--neutral-900);
+  --bg-brand: var(--orange-700);
+  --bg-brand-pressed: var(--orange-800);
+  --bg-brand-subtle: var(--orange-50);
+  --bg-danger: var(--red-600);
+  --bg-danger-pressed: var(--red-700);
+  --bg-disabled: var(--neutral-100);
+  --bg-success-subtle: var(--green-50);
+  --bg-warning-subtle: var(--amber-50);
+  --bg-danger-subtle: var(--red-50);
+  --bg-info-subtle: var(--blue-50);
+  --bg-accent: var(--royal-500);
+  --bg-accent-pressed: var(--royal-700);
+  --bg-accent-subtle: var(--royal-50);
+  --bg-selected: var(--royal-50);
+  --bg-success: var(--green-600);
+  --bg-warning: var(--amber-500);
+  --bg-info: var(--blue-600);
+  --bg-offline: var(--amber-700);
+  --bg-offline-subtle: var(--amber-50);
+  --bg-elevated: var(--neutral-0);
+  --bg-scrim: var(--black-scrim);
+
+  /* text */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-600);
+  --text-disabled: var(--neutral-400);
+  --text-on-brand: var(--neutral-0);
+  --text-on-inverse: var(--neutral-0);
+  --text-brand: var(--orange-700);
+  --text-success: var(--green-700);
+  --text-warning: var(--amber-700);
+  --text-danger: var(--red-700);
+  --text-info: var(--blue-700);
+  --text-accent: var(--royal-600);
+  --text-on-accent: var(--neutral-0);
+  --text-offline: var(--amber-700);
+  --text-link: var(--royal-600);
+  --text-placeholder: var(--neutral-400);
+
+  /* border */
+  --border-default: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-focus: var(--royal-500);
+  --border-brand: var(--orange-700);
+  --border-danger: var(--red-600);
+  --border-accent: var(--royal-500);
+  --border-selected: var(--royal-500);
+  --border-divider: var(--neutral-100);
+
+  /* chart */
+  --chart-series-1: var(--orange-600);
+  --chart-series-2: var(--royal-500);
+  --chart-series-3: var(--green-600);
+  --chart-series-4: var(--purple-600);
+  --chart-series-5: var(--teal-600);
+  --chart-series-6: var(--pink-600);
+  --chart-series-7: var(--amber-500);
+  --chart-series-8: var(--lime-600);
+  --chart-series-9: var(--slate-600);
+
+  /* spacing, radius, size, motion */
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --radius-6: 6px;
+  --radius-10: 10px;
+  --radius-14: 14px;
+  --radius-20: 20px;
+  --radius-999: 999px;
+  --control-md: 48px;
+  --control-lg: 56px;
+  --control-xl: 64px;
+  --device-handheld-margin: 16px;
+  --device-handheld-gutter: 12px;
+  --device-handheld-columns: 4;
+  --device-tablet-margin: 24px;
+  --device-tablet-gutter: 16px;
+  --device-tablet-columns: 8;
+  --device-tablet-side-panel-width: 400px;
+  --device-desktop-margin: 32px;
+  --device-desktop-gutter: 24px;
+  --device-desktop-columns: 12;
+  --device-desktop-side-panel-width: 480px;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-toast: 3000ms;
+  --duration-debounce-tap: 1000ms;
+  --duration-offline-timeout: 3000ms;
+  --duration-search-debounce: 800ms;
+
+  /* effects */
+  --elevation-panel: 0 1px 2px 0 #171c210f;  /* แผง / การ์ดบนพื้นหลัง */
+  --elevation-sticky: 0 -2px 8px 0 #171c2114;  /* แถบปุ่มติดล่าง (StickyActionBar) */
+  --elevation-dialog: 0 8px 24px 0 #171c2129;  /* dialog / sheet */
+  --elevation-toast: 0 4px 12px 0 #171c2124;  /* toast / snackbar */
+  /* แบรนด์ตัวอย่าง · ตัวอักษรขาว contrast 3.56–5.18:1 ใช้กับข้อความหนา >= 18.66px เท่านั้น */
+  --gradient-brand: linear-gradient(135deg, #ea580c, #c2410c);
+
+  --font-family: "IBM Plex Sans Thai", sans-serif;
+}
+
+/* Text styles */
+.type-display { font: 700 32px/44px var(--font-family); letter-spacing: 0; }
+.type-title { font: 600 24px/34px var(--font-family); letter-spacing: 0; }
+.type-heading { font: 600 20px/30px var(--font-family); letter-spacing: 0; }
+.type-body-large { font: 400 18px/28px var(--font-family); letter-spacing: 0; }
+.type-body-default { font: 400 16px/24px var(--font-family); letter-spacing: 0; }
+.type-body-small { font: 400 14px/20px var(--font-family); letter-spacing: 0; }
+.type-label-default { font: 500 16px/24px var(--font-family); letter-spacing: 0; }
+.type-label-small { font: 500 14px/20px var(--font-family); letter-spacing: 0; }
+.type-caption { font: 400 12px/18px var(--font-family); letter-spacing: 0; }
+.type-amount-total { font: 700 32px/44px var(--font-family); letter-spacing: 0; }
+.type-amount-default { font: 600 18px/28px var(--font-family); letter-spacing: 0; }
+/* ตัวเลขใหญ่เด่นบนจอ เช่น ยอดรวม · ยอดคงเหลือ */
+.type-numeric-display { font: 700 56px/64px var(--font-family); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+/* ตัวเลข KPI ในรายงานและการ์ดสรุป */
+.type-numeric-headline { font: 700 28px/36px var(--font-family); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+/* ตารางหลายคอลัมน์บนจอใหญ่แนวนอน (tnum สำหรับคอลัมน์ตัวเลข) */
+.type-table-dense { font: 400 13px/18px var(--font-family); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+/* หัวตาราง dense */
+.type-table-header { font: 600 13px/18px var(--font-family); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+/* หัวกลุ่มในหน้าตั้งค่า / หัวแผง */
+.type-section { font: 600 18px/28px var(--font-family); letter-spacing: 0; }
+/* ป้ายปุ่มใหญ่ (XL) หนาพอสำหรับตัวอักษรขาวบน --gradient-brand */
+.type-label-large { font: 700 20px/30px var(--font-family); letter-spacing: 0; }
